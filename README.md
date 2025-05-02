@@ -1,27 +1,41 @@
 # Inazuma API
 
-This is an Inazuma API built using:
+**Inazuma API** is a backend application built with **.NET Core** and **C#**, designed to manage player data for an Inazuma-themed application. It provides full **CRUD** (Create, Read, Update, Delete) functionality and connects to a **SQL database** for data persistence.
 
-- **DDD Architecture (Domain-Driven Design)**
-- **CQRS Design Pattern (Command Query Responsibility Segregation)**
-- **SQL Injection Filtering and other validations**
+## ⚙️ Technologies Used
 
-## Endpoints
+- **.NET Core** (C#)
+- **MYSQL**
+- **Domain-Driven Design (DDD)**
+- **CQRS (Command Query Responsibility Segregation)**
+- **Input Validation & SQL Injection Filtering**
 
-- **GET /item/{id}**  
-  Retrieves a single item by ID (player name).
+## ⚽ Features
 
-- **GET /items**  
-  Retrieves all items sorted by a specific stat.
+- ➕ Add new players
+- ✏️ Edit existing players
+- ❌ Delete players
+- 📋 View all players
+- 🔍 Search player by ID or name
+- 📊 Sort players by specific stats
 
-- **POST /item**  
-  Adds a new item.
+## 📌 API Endpoints
 
-- **DELETE /item/{id}**  
-  Deletes a single item by ID.
+| Method | Endpoint         | Description                     |
+|--------|------------------|---------------------------------|
+| GET    | `/item/{id}`     | Retrieve a player by ID         |
+| GET    | `/items`         | Retrieve all players (sortable) |
+| POST   | `/item`          | Add a new player                |
+| PUT    | `/item/{id}`     | Update an existing player       |
+| DELETE | `/item/{id}`     | Delete a player by ID           |
 
-- **PUT /item/{id}**  
-  Updates a single item by ID.
+> Note: Endpoint names use "item" but represent "players" and id is "player name".
 
-- **DELETE /item/{id}**  
-  Deletes a single item by ID (Duplicate endpoint for emphasis).
+## 💾 Database
+
+This API uses a **SQL-based database** to store all player data. The `DbContext` is configured to ensure proper mapping and validations.
+
+## 🔐 Security
+
+- Parameter sanitization to prevent SQL injection
+- DTO validation for input safety
