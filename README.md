@@ -40,5 +40,6 @@ This API uses a **SQL-based database** to store all player data. The `DbContext`
 - Parameter sanitization to prevent SQL injection
 - DTO validation for input safety
 
+## ⚙️ Demo
 
-TRY IT ONLINE - 🔗 [DEMO](https://api.microrax.site/index.html)
+- TRY IT ONLINE - 🔗 [DEMO](https://api.microrax.site/index.html)
